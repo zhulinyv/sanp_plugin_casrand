@@ -1,0 +1,101 @@
+{
+    "prompt_config": {
+        "prompts": [
+            {
+                "selectionMethod": "single",
+                "shuffled": false,
+                "prob": 0.0,
+                "num": 1,
+                "comment": "角色",
+                "strs": [
+                    "[[nekomiya hinata]]",
+                    "[[rosmontis (arknights)]]"
+                ],
+                "enabled": true
+            },
+            {
+                "selectionMethod": "multiple_num",
+                "shuffled": true,
+                "prob": 0.0,
+                "num": 4,
+                "comment": "画师",
+                "strs": [
+                    "artist:a",
+                    "artist:b",
+                    "artist:c",
+                    "artist:d",
+                    "artist:e"
+                ],
+                "enabled": true
+            },
+            {
+                "selectionMethod": "multiple_num",
+                "shuffled": true,
+                "prob": 0.03,
+                "num": 1,
+                "comment": "特殊风格",
+                "strs": [
+                    "style:lineart",
+                    "style:no_lineart",
+                    "style:limited_palette",
+                    "style:spot_color",
+                    "style:3d_rendering",
+                    "style:blending",
+                    "style:pixel_art",
+                    "style:graphite_(medium)",
+                    "style:colored_pencil_(medium)"
+                ],
+                "enabled": true
+            },
+            {
+                "selectionMethod": "all",
+                "shuffled": false,
+                "prob": 0.0,
+                "num": 1,
+                "type": "str",
+                "comment": "前缀",
+                "strs": [
+                    "solo",
+                    "loli"
+                ],
+                "enabled": true
+            },
+            {
+                "selectionMethod": "single",
+                "shuffled": false,
+                "prob": 0.0,
+                "num": 1,
+                "comment": "内容",
+                "strs": [
+                    "bare foot, foot focus, toes, sitting, knees up, arm support, looking at viewer",
+                    "sitting in gaming chair, hand between legs, leaning forward, smile, fang",
+                    "adjusting eyewear, sitting, book on lap, looking at viewer, one eye closed, :<, from above",
+                    "double peace sign, smile, teeth, upper body, notice lines"
+                ],
+                "enabled": true
+            },
+            {
+                "selectionMethod": "multiple_prob",
+                "shuffled": false,
+                "prob": 0.7,
+                "num": 1,
+                "comment": "背景",
+                "strs": [
+                    "blurry background"
+                ],
+                "enabled": true
+            },
+            {
+                "selectionMethod": "all",
+                "shuffled": false,
+                "prob": 0.0,
+                "num": 1,
+                "comment": "质量",
+                "strs": [
+                    "best quality, amazing quality, very aesthetic, absurdres"
+                ],
+                "enabled": true
+            }
+        ]
+    }
+}
