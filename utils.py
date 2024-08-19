@@ -53,13 +53,11 @@ casrand_times = {}
 
 def generate(*args):
     sleep_for_cool(env.t2i_cool_time - 3, env.t2i_cool_time + 3)
-    # for arg in args:
-    #     print(arg)
+
     new_list = []
     while args:
         new_list.append(args[0:6])
         args = args[6:]
-    # print(new_list)
 
     prompts = ""
 
@@ -117,8 +115,6 @@ def generate(*args):
         random.randint(1000000000, 9999999999) if env.seed == -1 else env.seed,
         times=1,
     )
-
-    logger.debug(resolution)
 
     return img
 
