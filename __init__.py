@@ -79,10 +79,10 @@ def plugin():
                 casrand_save_button = gr.Button("保存")
             casrand_otp_info = gr.Textbox(label="输出信息")
             casrand_num = gr.Slider(
-                0, 10, env.casrand_component_num, step=1, label="新配置添加数量"
+                0, 10, casrand_component_num, step=1, label="新配置添加数量"
             )
             casrand_config_file = gr.Textbox(
-                env.cas_rand_default_config, label="配置文件路径"
+                cas_rand_default_config_file_path, label="配置文件路径"
             )
             casrand_save_button.click(
                 modify_plugin_env,
