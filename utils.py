@@ -1,7 +1,6 @@
 import random
 
 import gradio as gr
-from loguru import logger
 
 from src.setting_update import modify_env
 from src.text2image_nsfw import t2i_by_hand
@@ -89,8 +88,6 @@ def generate(*args):
                     if random.random() <= i[4]:
                         prompts += "{}, ".format(n)
 
-    logger.info(prompts := format_str(prompts))
-
     resolution = (
         random.choice(["832x1216", "1024x1024", "1216x832"])
         if env.img_size == -1
@@ -98,7 +95,7 @@ def generate(*args):
     ).split("x")
 
     img = t2i_by_hand(
-        prompts,
+        format_str(prompts),
         format_str(
             random.choice(
                 read_json("./files/favorite.json")["negative_prompt"]["belief"]
