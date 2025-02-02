@@ -5,7 +5,7 @@ import gradio as gr
 from src.setting_update import modify_env
 from src.text2image_nsfw import t2i_by_hand
 from utils.env import env
-from utils.utils import format_str, read_json, sleep_for_cool
+from utils.utils import choose_item, format_str, read_yaml, sleep_for_cool
 
 casrand_random_methods = [
     "全部",
@@ -96,11 +96,7 @@ def generate(*args):
 
     img = t2i_by_hand(
         format_str(prompts),
-        format_str(
-            random.choice(
-                read_json("./files/favorite.json")["negative_prompt"]["belief"]
-            )
-        ),
+        format_str(choose_item(read_yaml("./files/favorites/negative.yaml"))[1]["tag"]),
         resolution[0],
         resolution[1],
         env.scale,
@@ -112,10 +108,15 @@ def generate(*args):
         env.variety,
         env.decrisp,
         random.randint(1000000000, 9999999999) if env.seed == -1 else env.seed,
-        times=1,
+        1,
+        True,
+        False,
+        "",
+        "",
+        "A1",
     )
 
-    return img
+    return img[0]
 
 
 def cas_rand_default_component(name, text, method, prob, num, switch):
