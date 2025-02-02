@@ -109,6 +109,8 @@ def generate(*args):
         env.steps,
         env.sm,
         env.sm_dyn,
+        env.variety,
+        env.decrisp,
         random.randint(1000000000, 9999999999) if env.seed == -1 else env.seed,
         times=1,
     )
