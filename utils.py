@@ -100,6 +100,7 @@ def generate(*args):
         resolution[0],
         resolution[1],
         env.scale,
+        env.rescale,
         env.sampler,
         env.noise_schedule,
         env.steps,
